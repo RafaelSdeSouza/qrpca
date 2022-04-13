@@ -1,7 +1,8 @@
 
-# qrprcomp
+# qrprcomp (R package)
 
 <!-- badges: start -->
+![R-CMD-check](https://github.com/RafaelSdeSouza/qrprcomp/workflows/R-CMD-check/badge.svg)
 <!-- badges: end -->
 
 A QR based PCA
