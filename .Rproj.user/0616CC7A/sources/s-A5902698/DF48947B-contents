@@ -1,0 +1,87 @@
+# PCA on posteriors
+require(dplyr)
+require(tidyr);require(purrr);require(data.table);require(lineup);
+require(GGally);require(colorspace);library("heatmaply")
+x <- iris[,1:4]
+
+
+A <- svd(x)
+u <- A$u
+d <- diag(A$d)
+v <- A$v
+
+u%*%d%*%t(v)
+
+# Equivalent to PCA projection
+Z <- u%*%d
+
+# Project new data
+
+p <- prcomp(x,scale=FALSE,center=FALSE)
+
+
+A0 <- svd(iris[,1:4])
+head(A0$u%*%diag(A0$d))
+
+QR <- qr(iris[,1:4])
+Q <- qr.Q(QR)
+R <-qr.R(QR)
+
+A <- svd(t(R))
+S <- diag(A$d)
+V <- A$v
+head(Q%*%V%*%S)
+
+
+head(Q%*%V)
+
+head(A0$u)
+
+sdvar <- apply(rdat,2,sd)
+medianvar <- apply(rdat,2,median)
+sdvar[1:6]/medianvar[1:6]
+
+# PCA on masses
+pcavar <- prcomp(rdat[,1:6])
+
+# Relative Uncertainty
+sdpca <- apply(pcavar$x,2,sd)
+medianpca <- apply(pcavar$x,2,median)
+sdpca/medianpca
+
+
+
+
+corpca <- cor(pcavar$x)
+
+#
+tcor <- corbetw2mat(
+  rdat[,1:6],
+  pcavar$x,
+  what = c( "all"),
+  corthresh = 0.9
+)
+heatmap(tcor)
+
+ggheatmap(tcor,
+          colors = colorRampPalette(brewer.pal(3, "RdBu"))(256))
+
+ggcorr(data = pcavar$x, 
+             method = c("pairwise", "spearman"), 
+       label = TRUE, 
+       label_round = 2, 
+       label_size = 4) + scale_fill_continuous_diverging(name="correlation")
+
+
+ggcorr(data = rdat, 
+       method = c("pairwise", "spearman"), 
+       label = TRUE, 
+       label_round = 2, 
+       label_size = 4) + scale_fill_continuous_diverging(name="correlation")
+
+
+
+
+apply(pcavar$x,2,quantile)
+apply(pcavar$x,2,quantile)
+
