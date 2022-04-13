@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/qrprcomp/DESCRIPTION",
     "project_path": "DESCRIPTION",
     "type": "dcf",
-    "hash": "0",
+    "hash": "2181265174",
     "contents": "",
     "dirty": false,
     "created": 1649842400512.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "5,9",
+        "cursorPosition": "5,30",
         "scrollLine": "1"
     },
     "folds": "",
-    "lastKnownWriteTime": 1649859062,
+    "lastKnownWriteTime": 1649860390,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1649859062693,
+    "last_content_update": 1649860390428,
     "read_only": false,
     "read_only_alternatives": []
 }
