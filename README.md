@@ -4,7 +4,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of qrprcomp is to ...
+A QR based PCA
 
 ## Installation
 
