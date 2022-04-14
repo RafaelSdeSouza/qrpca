@@ -1,4 +1,4 @@
-
+![GitHub](https://img.shields.io/github/license/RafaelSdeSouza/qrprcomp)
 # qrprcomp (R package)
 
 A QR based PCA
@@ -18,7 +18,7 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(qrprcomp)
-set.seed(1)
+set.seed(42)
   N <- 1e4
   M <- 1e3
   X <- matrix(rnorm(N*M), M)
@@ -27,3 +27,6 @@ set.seed(1)
 
 ```
 
+## Dependencies
+
+`torch`
