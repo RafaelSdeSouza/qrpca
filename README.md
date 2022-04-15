@@ -1,8 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/RafaelSdeSouza/qrprcomp)
 # qrprcomp (R package)
 
-The qrprcomp package offers a fast QR based principal components analysis implementation with similar
-functionalities as the prcomp package. 
+qrprcomp behaves like prcomp. But employes a QR decomposition instead of svd for better performance. 
 
 ## Installation
 
