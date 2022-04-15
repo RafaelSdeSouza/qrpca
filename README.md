@@ -1,7 +1,8 @@
 ![GitHub](https://img.shields.io/github/license/RafaelSdeSouza/qrprcomp)
 # qrprcomp (R package)
 
-A QR based PCA
+The qrprcomp package offers a fast QR based principal components analysis implementation with similar
+functionalities as the prcomp package. 
 
 ## Installation
 
@@ -12,9 +13,9 @@ install.packages('remotes')
 remotes::install_github("RafaelSdeSouza/qrprcomp")
 library(qrprcomp)
 ```
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+An example of using the package to run a PCA:
 
 ``` r
 library(qrprcomp)
@@ -30,3 +31,5 @@ set.seed(42)
 ## Dependencies
 
 `torch`
+
+## References
