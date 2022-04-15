@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/RafaelSdeSouza/qrprcomp)
 # qrprcomp (R package)
 
-A QR based PCA
+qrprcomp behaves similarly prcomp. But employes a QR based PCA instead of of applying singular value decomposition on the original matrix. 
 
 ## Installation
 
@@ -12,9 +12,9 @@ install.packages('remotes')
 remotes::install_github("RafaelSdeSouza/qrprcomp")
 library(qrprcomp)
 ```
-## Example
+## Usage
 
-This is a basic example which shows you how to solve a common problem:
+An example of using the package to run a PCA:
 
 ``` r
 library(qrprcomp)
@@ -30,3 +30,6 @@ set.seed(42)
 ## Dependencies
 
 `torch`
+
+## References
+- Sharma, Alok and Paliwal, Kuldip K. and Imoto, Seiya and Miyano, Satoru 2013, International Journal of Machine Learning and Cybernetics, 4, 6, doi: [10.1007/s13042-012-0131-7](https://doi.org/10.1007/s13042-012-0131-7)
