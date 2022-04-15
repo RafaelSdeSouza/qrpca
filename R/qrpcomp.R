@@ -45,7 +45,7 @@ qrprcomp <- function(x,center = TRUE, scale = FALSE){
     rotation <- as.matrix(u)
     dimnames(rotation) <- list(colnames(x), paste0("PC", seq_len(ncol(u))))
     out <- as.matrix(out)
-    dimnames(out) <- dimnames(rotation)
+    colnames(out) <- colnames(rotation)
     r <- list(sdev = sdev, rotation = rotation,
     center = if(is.null(cen)) FALSE else cen,
     scale = if(is.null(sc)) FALSE else sc,
