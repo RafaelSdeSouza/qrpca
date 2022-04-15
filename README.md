@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/RafaelSdeSouza/qrprcomp)
 # qrprcomp (R package)
 
-qrprcomp behaves like prcomp. But employes a QR decomposition instead of svd for better performance. 
+qrprcomp behaves similarly prcomp. But employes a QR based PCA instead of of applying singular value decomposition on the original matrix. 
 
 ## Installation
 
@@ -32,3 +32,4 @@ set.seed(42)
 `torch`
 
 ## References
+- Sharma, Alok and Paliwal, Kuldip K. and Imoto, Seiya and Miyano, Satoru 2013, International Journal of Machine Learning and Cybernetics, 4, 6, doi: `10.1007/s13042-012-0131-7 <https://doi.org/10.1007/s13042-012-0131-7>`_
