@@ -4,7 +4,7 @@
 \alias{qrprcomp}
 \title{QR based PCA}
 \usage{
-qrprcomp(x, center = TRUE, scale = FALSE)
+qrprcomp(x, center = TRUE, scale = FALSE, cuda = FALSE)
 }
 \arguments{
 \item{x}{a numeric matrix or data frame which provides the data
@@ -14,8 +14,10 @@ for the principal component analysis.}
 columns) of \code{x} should be subtracted.}
 
 \item{scale}{a logical value indicating whether the columns of \code{x}
-should be scaled to have unit variance before the analysis takes place. The
-default is \code{FALSE} for consistency with \code{prcomp}.}
+ should be scaled to have unit variance before the analysis takes place. The
+ default is \code{FALSE} for consistency with \code{prcomp}.
+@param cuda a logical value indicating whether cuda acceleration should be
+used. The default is \code{FALSE}.}
 }
 \value{
 \code{qrprcomp} returns a list with class \code{prcomp}

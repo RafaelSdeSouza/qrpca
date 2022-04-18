@@ -6,12 +6,15 @@ require(torch)
 use_test("run-test")
 
 
+N <- 1e6
+M <- 1e3
+X <- matrix(rnorm(N*M), M)
+
+
 system.time(prcomp(X))
 system.time(qrprcomp(X))
 
-N <- 1e5
-M <- 1e2
-X <- matrix(rnorm(N*M), M)
+
 
 
 pc <-  prcomp(X)
