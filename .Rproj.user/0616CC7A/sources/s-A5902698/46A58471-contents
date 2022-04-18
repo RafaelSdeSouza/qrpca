@@ -31,11 +31,8 @@
 #'   scaling used, or \code{FALSE}}
 #' @export
 qrprcomp <- function(x,center = TRUE, scale = FALSE,cuda = FALSE){
-  if(cuda == TRUE){
-    if(cuda_is_available()){device = torch_device("cuda:0")} else
+    if(cuda == TRUE){device = torch_device("cuda:0")} else
       device = torch_device(type='cpu')
-  }
-  else
     x <- scale(x, center = center, scale = scale)
   cen <- attr(x, "scaled:center")
   sc <- attr(x, "scaled:scale")
