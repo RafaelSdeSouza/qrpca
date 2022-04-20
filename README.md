@@ -23,7 +23,7 @@ set.seed(42)
   M <- 1e3
   X <- matrix(rnorm(N*M), M)
   system.time(prcomp(X))
-  system.time(qrprcomp(X))
+  system.time(qrprcomp(X,center = TRUE, scale = FALSE,cuda = FALSE))
 
 ```
 
