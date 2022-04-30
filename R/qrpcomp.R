@@ -37,7 +37,7 @@ qrprcomp <- function(x,center = TRUE, scale = FALSE,cuda = FALSE){
   cen <- attr(x, "scaled:center")
   sc <- attr(x, "scaled:scale")
   x0 <- if (is_torch_dtype(x)) x  else torch_tensor(as.matrix(x),device=device)
-  out = torch::torch_qr(x0)
+  out = torch::linalg_qr(x0,mode = "complete")
   q <- out[[1]]
   r <- out[[2]]
   A <- torch::torch_svd(r$t())
