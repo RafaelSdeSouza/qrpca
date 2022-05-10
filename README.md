@@ -1,7 +1,7 @@
 ![GitHub](https://img.shields.io/github/license/RafaelSdeSouza/qrprcomp)
 # qrprcomp (R package)
 
-qrprcomp behaves similarly prcomp. But employes a QR based PCA instead of applying singular value decomposition on the original matrix. The code uses torch for matrix operations and provides support for gpu acceleration. 
+qrprcomp behaves similarly prcomp. But employs a QR-based PCA instead of applying singular value decomposition on the original matrix. The code uses torch under the hood for matrix operations and supports GPU acceleration.
 
 ## Installation
 
