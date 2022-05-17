@@ -4,7 +4,7 @@
 #' Performs a QR based principal component analysis,
 #' The result is returned as an object of class \code{prcomp}.
 #'
-#' \code{qrprcomp} computes a principal component (PC) using QR decomposition as
+#' \code{qrpca} computes a principal component (PC) using QR decomposition as
 #' intermediate step. Matrix operations mostly uses  \code{torch} for
 #' performance.
 #'
@@ -12,7 +12,7 @@
 #' @export
 #' @param x a numeric matrix or data frame which provides the data
 #'   for the principal component analysis.
-#' @rdname qrprcomp
+#' @rdname qrpca
 #' @param center a logical value indicating whether the empirical mean of (the
 #'   columns) of \code{x} should be subtracted.
 #' @param scale a logical value indicating whether the columns of \code{x}
@@ -20,7 +20,7 @@
 #'   default is \code{FALSE} for consistency with \code{prcomp}.
 #'  @param cuda a logical value indicating whether cuda acceleration should be
 #'  used. The default is \code{FALSE}.
-#' @return \code{qrprcomp} returns a list with class \code{prcomp}
+#' @return \code{qrpca} returns a list with class \code{prcomp}
 #'   containing the following elements: \item{sdev}{the additional standard
 #'   deviation explained by each component.}
 #'   \item{rotation}{the matrix of loadings,
@@ -30,7 +30,7 @@
 #'   \item{center, scale}{the centering and
 #'   scaling used, or \code{FALSE}}
 #' @export
-qrprcomp <- function(x,center = TRUE, scale = FALSE,cuda = FALSE){
+qrpca <- function(x,center = TRUE, scale = FALSE,cuda = FALSE){
   if(cuda == TRUE){device = torch_device("cuda:0")} else
   device = torch_device(type='cpu')
   x <- scale(x, center = center, scale = scale)
