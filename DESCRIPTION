@@ -4,7 +4,7 @@ Title: QR based PCA
 Version: 0.1.0
 Author: Rafael S. de Souza
 Maintainer: Rafael S. de Souza <drsouza@shao.ac.cn>
-Description: The function 'qrprcomp' computes a QR based  principal components
+Description: The function 'qrpca' computes a QR based  principal components
  analysis (PCA). Matrix operations use torch for efficiency.
  The function have the same interface as the 'prcomp' function from the 'stats' 
  package,  and return the result of the analysis as an object of class 'prcomp'. 
