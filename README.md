@@ -17,14 +17,14 @@ library(qrpca)
 An example of using the package to run a PCA:
 
 ``` r
-library(qrprcomp)
+library(qrpca)
 set.seed(42)
   N <- 1e4
   M <- 1e3
   X <- matrix(rnorm(N*M), M)
   system.time(prcomp(X))
-  system.time(qrprcomp(X))
-  system.time(qrprcomp(X,cuda = TRUE))
+  system.time(qrpca(X))
+  system.time(qrpca(X,cuda = TRUE))
 ```
  For an astronomical example, we use a datacube from MaNGA for galaxy. It comprises a tensor [74,74,4563], of two spatial dimensions and one spectral dimension. The following code reads the cube and flattens the spectra into a matrix of dimension [5476,4563]
  
