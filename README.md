@@ -1,5 +1,5 @@
 ![GitHub](https://img.shields.io/github/license/RafaelSdeSouza/qrprcomp)
-# qrprcomp (R package)
+# qrpca(R package)
 
 qrprcomp behaves similarly prcomp. But employs a QR-based PCA instead of applying singular value decomposition on the original matrix. The code uses torch under the hood for matrix operations and supports GPU acceleration.
 
@@ -9,8 +9,8 @@ Source installation from GitHub:
 
 ```R
 install.packages('remotes')
-remotes::install_github("RafaelSdeSouza/qrprcomp")
-library(qrprcomp)
+remotes::install_github("RafaelSdeSouza/qrpca")
+library(qrpca)
 ```
 ## Usage
 
