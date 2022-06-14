@@ -48,9 +48,9 @@ eigenmap <- function(pcobj, k = 1){
   out
 }
 
-map1 <- eigenmap(pca) %>% melt()
+map <- eigenmap(pca) %>% melt()
 
-ggplot(map1,aes(x=Var1,y=Var2,z=value)) +
+ggplot(map,aes(x=Var1,y=Var2,z=value)) +
   geom_raster(aes(fill=value)) +
   scale_fill_viridis_c(option="C") +
   theme(legend.position = "none") 
